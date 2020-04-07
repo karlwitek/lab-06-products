@@ -9,7 +9,7 @@ function renderCampEquip(equipmentItem) {
 
     
     h1.textContent = equipmentItem.name;
-    img.src = '../assets' + equipmentItem.image;
+    img.src = '../assets/' + equipmentItem.image;
     h3.textContent = equipmentItem.description;
     h2.textContent = equipmentItem.price;
 
