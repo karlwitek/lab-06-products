@@ -60,7 +60,7 @@ const stove = {
     id: 'stove',
     name: 'Stove',
     image: 'stove.png',
-    description: 'Single burner, variable flame',
+    description: 'Single burner, adjustable flame',
     category: 'accessories',
     price: 35.00
 };
