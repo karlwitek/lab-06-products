@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import cart from '../data/cart.js';
-import campEquipment from '../data/camp-equip.js';
+//import campEquipment from '../data/camp-equip.js';
 
 // import example from '../src/example.js';
 import findById from '../common/utils.js';
@@ -20,15 +20,12 @@ test('find the item by id', function(assert) {
     //Act 
     // Call the function you're testing and set the result to a const
     const foundItem = findById(cart, id);
-    console.log(foundItem);
-
+    
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(foundItem.id, expected);
 });
 
-
-const test2 = QUnit.test;
 
 test('find the total price for a line item', function(assert) {
     //Arrange

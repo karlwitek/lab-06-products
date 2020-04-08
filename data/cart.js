@@ -1,6 +1,6 @@
 const cart = [{
     id: 'tent',
-    quantity: 2
+    quantity: 3
 }, {
     id: 'sleepingBag',
     quantity: 2

@@ -1,8 +1,5 @@
+//import { calcLineItem } from '../../common/utils.js';
 
-function formatPrice(price) {
-    const newNum = '$' + price.toFixed(2);
-    return newNum;
-}
 
 export default function renderLineItem(cartItem, campEquip) {
     
@@ -15,10 +12,11 @@ export default function renderLineItem(cartItem, campEquip) {
     quantityTd.textContent = cartItem.quantity;
 
     const priceTd = document.createElement('td');
-    priceTd.textContent = formatPrice(campEquip.price);
+    priceTd.textContent = campEquip.price;
 
     const totalTd = document.createElement('td');
-    const totalPrice = formatPrice(campEquip.price * cartItem.quantity);
+    const totalPrice = (campEquip.price * cartItem.quantity);
+    //const displayPrice = formatPrice(totalPrice);
     totalTd.textContent = totalPrice;
 
 
@@ -32,6 +30,6 @@ export default function renderLineItem(cartItem, campEquip) {
 
 }
 
-//export default renderLineItem;
+
 
 
