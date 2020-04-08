@@ -1,8 +1,8 @@
-import { renderLineItem } from '../shopping-cart/render-line-item.js';
+import renderLineItem from '../products/shopping-cart/render-line-item.js';
 
+const test = QUnit.test;
 
-
-test('renders a line item', assert => {
+test('renders a line item', function(assert) {
 
     const cartItem = {
         id: 'tent',
@@ -19,7 +19,7 @@ test('renders a line item', assert => {
 
     };
 
-    const expected = '<tbody><tr><td>Tent</td><td>2</td><td>150.00</td><td>300.00</td></tr></tbody>';
+    const expected = '<tr><td>Tent</td><td>2</td><td>$150.00</td><td>$300.00</td></tr>';
 
     const tableRow = renderLineItem(cartItem, campEquipment);
     const html = tableRow.outerHTML;
