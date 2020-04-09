@@ -1,6 +1,6 @@
 li {
     width: 350px;
-    height: 430px;
+    height: 460px;
     border: 2px solid black;
     
 }
@@ -27,5 +27,10 @@ button {
 
 h2 {
     text-align: center;
+}
+
+.button-style {
+    width: 60px;
+    height: 35px;
 }
 

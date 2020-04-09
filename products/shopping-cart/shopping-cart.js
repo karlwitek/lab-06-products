@@ -7,7 +7,6 @@ import findById, { calcOrderItem, formatPrice } from '../../common/utils.js';
 const tBody = document.querySelector('tbody');
 const orderDisplay = document.getElementById('order-total');
 
-//const orderTotal = document.getElementById('order-total');
 
 for (let i = 0; i < cart.length; i ++) {
     const cartItem = cart[i];
@@ -18,7 +17,23 @@ for (let i = 0; i < cart.length; i ++) {
     tBody.appendChild(tableRow);
     
 }
+const placeOrderButton = document.getElementById('place-order');
 
+if (cart.length === 0) {
+
+    placeOrderButton.disabled = true;
+}
+else {
+    placeOrderButton.addEventListener('click', () => {
+        localStorage.removeItem('CART');
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2));
+
+    });
+
+
+}
+
+    
 const totalCostofItems = calcOrderItem(cart, campEquipment);
 orderDisplay.textContent = formatPrice(totalCostofItems);
 
