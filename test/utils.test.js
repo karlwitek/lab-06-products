@@ -4,10 +4,7 @@ import cart from '../data/cart.js';
 
 // import example from '../src/example.js';
 import findById from '../common/utils.js';
-import { calcLineItem } from '../common/utils.js';
-
-
-
+import { calcLineItem, calcOrderItem } from '../common/utils.js';
 
 const test = QUnit.test;
 
@@ -43,5 +40,15 @@ test('find the total price for a line item', function(assert) {
     // Make assertions about what is expected valid result
     assert.equal(totalPrice, expected);
 });
+
+test('find the total price of all line items', function(assert) {
+    const array1 = [{ id: 1, quantity: 2 }, { id:2, quantity: 3 }, { id: 3, quantity: 4 }];
+    const array2 = [{ id: 1, price: 1 }, { id:2, price: 2 }, { id: 3, price: 3 }];
+    const expected = 20;
+    const finalTotal = calcOrderItem(array1, array2);
+    assert.equal(finalTotal, expected);
+
+});
+
 
 
