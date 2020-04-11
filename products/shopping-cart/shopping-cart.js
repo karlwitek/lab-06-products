@@ -16,7 +16,6 @@ for (let i = 0; i < cart.length; i ++) {
     const equipmentItem = findById(campEquipment, cartItem.id);
     const tableRow = renderLineItem(cartItem, equipmentItem);
 
-
     tBody.appendChild(tableRow);
     
 }
