@@ -10,5 +10,12 @@ button {
     background-color: chartreuse;
     margin-left: 400px;
     margin-top: 20px;
+    margin-bottom: 30px;
 
+}
+
+a {
+    padding-left: 400px;
+    color: blue;
+    
 }

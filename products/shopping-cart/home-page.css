@@ -1,0 +1,15 @@
+.banner {
+    padding-left: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    color: orange;
+}
+
+h1 {
+    padding-left: 70px;
+}
+
+a {
+    padding-left: 170px;
+    color: blue;
+}
