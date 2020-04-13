@@ -10,7 +10,6 @@ const orderDisplay = document.getElementById('order-total');
 const newCart = localStorage.getItem('CART');
 let cart = JSON.parse(newCart);
 
-
 for (let i = 0; i < cart.length; i ++) {
     const cartItem = cart[i];
     const equipmentItem = findById(campEquipment, cartItem.id);
