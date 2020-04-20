@@ -34,7 +34,16 @@ function calcOrderItem(cartArray, productsArray) {
 
 }
 
-export { calcLineItem, formatPrice, calcOrderItem };
+function addProduct(object) {
+    const productList = localStorage.getItem('PRODUCTS');
+    const parseList = JSON.parse(productList);
+    parseList.push(object);
+    const stringedParseList = JSON.stringify(parseList);
+    localStorage.setItem('PRODUCTS', stringedParseList);
+
+}
+
+export { calcLineItem, formatPrice, calcOrderItem, addProduct };
 
 
 
